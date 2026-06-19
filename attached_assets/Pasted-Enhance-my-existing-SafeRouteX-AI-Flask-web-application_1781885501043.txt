@@ -1,0 +1,84 @@
+Enhance my existing SafeRouteX AI Flask web application without changing the current UI theme, prediction logic, or existing sections.
+
+IMPORTANT:
+- Do NOT modify the existing XGBoost prediction system.
+- Do NOT change the current premium dark UI.
+- Keep all existing functionality intact.
+- Only ADD the following new sections professionally.
+
+====================================================
+
+1. ADD MODEL PERFORMANCE SECTION
+
+Create a new section titled:
+
+"Model Performance Dashboard"
+
+Display the following metrics in premium animated cards:
+
+✓ Accuracy: 87.88%
+✓ Precision: 88%
+✓ Recall: 87%
+✓ F1-Score: 87%
+
+Requirements:
+- Use animated progress bars.
+- Use premium glassmorphism cards.
+- Add icons for each metric.
+- Make it fully responsive.
+
+Also display:
+
+Dataset Size: 1.1 Million Records
+Algorithm Used: XGBoost + DBSCAN
+Number of Features: 24
+
+====================================================
+
+2. ADD HOW TO USE SECTION
+
+Create a new section titled:
+
+"How to Use SafeRouteX AI"
+
+Display these steps in attractive cards with green tick icons:
+
+✓ Step 1: Enter location details.
+
+✓ Step 2: Enter weather and date-time information.
+
+✓ Step 3: Click the 'Predict Severity' button.
+
+✓ Step 4: View predicted risk level and travel recommendations.
+
+Requirements:
+- Use animated green tick icons.
+- Use modern cards with hover effects.
+- Keep the design consistent with the existing theme.
+
+====================================================
+
+3. ADD DISCLAIMER SECTION
+
+Create a new section at the bottom of the page titled:
+
+"Disclaimer"
+
+Display this message:
+
+"Predictions are generated using historical accident data and machine learning techniques. Results are intended for informational purposes only and should not replace official traffic advisories or real-time road safety information."
+
+Requirements:
+- Use a warning/info icon.
+- Display inside a professional highlighted card.
+- Match the current website design.
+
+====================================================
+
+Technical Requirements:
+
+- Must work on Replit Free Plan.
+- Keep mobile, tablet, and desktop responsiveness.
+- Use clean, modular code.
+- Add smooth animations and hover effects.
+- Do not remove or modify any existing functionality.

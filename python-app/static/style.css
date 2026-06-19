@@ -603,6 +603,147 @@ body {
     color: #22c55e;
 }
 
+/* ---- How to Use — Full Section Cards ---- */
+.htu-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(59,130,246,0.15);
+    border-radius: 22px;
+    padding: 36px 28px 28px;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    cursor: default;
+}
+
+.htu-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #22c55e, transparent);
+    opacity: 0;
+    transition: opacity 0.35s;
+}
+
+.htu-card:hover {
+    background: rgba(34,197,94,0.06);
+    border-color: rgba(34,197,94,0.35);
+    transform: translateY(-7px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.35), 0 0 24px rgba(34,197,94,0.08);
+}
+
+.htu-card:hover::before { opacity: 1; }
+
+/* step number watermark */
+.htu-step-num {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: rgba(59,130,246,0.07);
+    line-height: 1;
+    letter-spacing: -2px;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* animated green tick */
+.htu-tick-wrap {
+    width: 60px;
+    height: 60px;
+    background: rgba(34,197,94,0.12);
+    border: 1.5px solid rgba(34,197,94,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.35s;
+    animation: tickPulse 3s ease-in-out infinite;
+}
+
+.htu-card:hover .htu-tick-wrap {
+    background: rgba(34,197,94,0.22);
+    box-shadow: 0 0 24px rgba(34,197,94,0.3);
+    animation: none;
+    transform: scale(1.1);
+}
+
+@keyframes tickPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.3); }
+    50%       { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
+}
+
+.htu-tick {
+    font-size: 1.3rem;
+    color: #22c55e;
+    filter: drop-shadow(0 0 6px rgba(34,197,94,0.7));
+}
+
+.htu-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.htu-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.htu-icon-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 1.1rem;
+    color: rgba(59,130,246,0.45);
+    transition: color 0.3s;
+}
+
+.htu-card:hover .htu-icon-row { color: rgba(59,130,246,0.8); }
+
+/* connector line between cards (desktop) */
+.htu-connector {
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: -60px;
+    margin-bottom: 0;
+    pointer-events: none;
+    position: relative;
+    z-index: 0;
+}
+
+.htu-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(59,130,246,0.1), rgba(34,197,94,0.3), rgba(59,130,246,0.1));
+}
+
+.htu-arrow {
+    font-size: 0.85rem;
+    color: rgba(34,197,94,0.5);
+    padding: 0 6px;
+    animation: arrowPing 1.8s ease-in-out infinite;
+}
+
+.htu-arrow:nth-child(4) { animation-delay: 0.3s; }
+.htu-arrow:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes arrowPing {
+    0%, 100% { opacity: 0.4; transform: translateX(0); }
+    50%       { opacity: 1;   transform: translateX(4px); }
+}
+
 /* ---- History Table ---- */
 .table-history {
     background: transparent;
