@@ -9,19 +9,15 @@ localPort = 8000
 name = "SafeRouteX AI"
 paths = ["/"]
 
+[services.env]
+PORT = "8000"
+
 [services.development]
-run = "python /home/runner/workspace/python-app/app.py"
+run = "bash start.sh"
 
 [services.production]
-
-[services.production.build]
-args = ["pip", "install", "-r", "python-app/requirements.txt"]
-
-[services.production.run]
-args = ["bash", "start.sh"]
-
-[services.production.run.env]
-PORT = "8000"
+run = "bash start.sh"
+build = "pip install -r python-app/requirements.txt"
 
 [services.production.health.startup]
 path = "/"
