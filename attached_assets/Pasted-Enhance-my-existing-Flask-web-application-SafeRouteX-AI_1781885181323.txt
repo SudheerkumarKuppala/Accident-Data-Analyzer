@@ -1,0 +1,128 @@
+Enhance my existing Flask web application "SafeRouteX AI" without changing the current prediction logic, frontend theme, or model integration.
+
+IMPORTANT:
+- Do NOT modify the existing XGBoost prediction functionality.
+- Do NOT change the current UI theme, colors, animations, or layout.
+- Keep all existing sections intact.
+- Only ADD the following new features professionally.
+
+FEATURE 1: INTERACTIVE ACCIDENT HOTSPOT MAP
+
+Create a new section named:
+
+"Accident Hotspot Visualization"
+
+Requirements:
+
+- Use Leaflet.js to create an interactive map.
+- Display a USA map.
+- Add sample accident hotspot markers using latitude and longitude coordinates.
+- Use colored circles:
+    Red → High Accident Zone
+    Orange → Moderate Accident Zone
+    Green → Low Risk Zone
+- Add popups showing:
+    Location Name
+    Risk Level
+    Number of Accidents
+- Make the map fully responsive.
+- Add smooth animations.
+
+SECTION TITLE:
+"DBSCAN Accident Hotspot Detection"
+
+Description:
+"Interactive visualization of accident-prone regions identified using DBSCAN clustering."
+
+------------------------------------------------------------
+
+FEATURE 2: MODEL PERFORMANCE DASHBOARD
+
+Create a new section named:
+
+"Model Performance"
+
+Display the following metrics in attractive animated cards:
+
+Accuracy: 87.88%
+Precision: 88%
+Recall: 87%
+F1 Score: 87%
+
+Add a professional progress bar for each metric.
+
+Also add:
+
+Dataset Size: 1.1 Million Records
+Algorithm: XGBoost + DBSCAN
+Number of Features: 24
+
+------------------------------------------------------------
+
+FEATURE 3: SAFETY RECOMMENDATION PANEL
+
+After prediction, show dynamic recommendations based on predicted severity.
+
+Severity 1:
+"Travel conditions are safe."
+
+Severity 2:
+"Drive carefully and follow traffic rules."
+
+Severity 3:
+"High accident risk. Travel cautiously and avoid distractions."
+
+Severity 4:
+"Avoid travel if possible or take extreme caution."
+
+Display recommendations inside an attractive animated card.
+
+------------------------------------------------------------
+
+FEATURE 4: DOWNLOAD PREDICTION REPORT
+
+After prediction, add a button:
+
+"Download Prediction Report"
+
+Generate a PDF report containing:
+
+- Project Name
+- Prediction Date & Time
+- Input Parameters
+- Predicted Severity
+- Safety Recommendation
+- Model Accuracy (87.88%)
+
+Use a clean professional report format.
+
+------------------------------------------------------------
+
+FEATURE 5: PREDICTION HISTORY
+
+Create a section named:
+
+"Recent Predictions"
+
+Store the latest 10 predictions during the current session.
+
+Display:
+
+- Date & Time
+- Severity Level
+- Risk Status
+
+Use a professional responsive table.
+
+------------------------------------------------------------
+
+TECHNICAL REQUIREMENTS:
+
+- Must run on Replit Free Plan.
+- Keep Flask backend structure unchanged.
+- Add proper comments.
+- Handle errors gracefully.
+- Ensure mobile, tablet, and desktop responsiveness.
+- Maintain existing premium UI design.
+
+Do not remove any existing functionality. Only enhance the current application.
