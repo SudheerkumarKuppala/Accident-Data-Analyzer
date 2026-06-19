@@ -1,0 +1,145 @@
+Use this as the **very first prompt** in a new Replit project. This prompt strongly instructs Replit AI to avoid Node.js, pnpm, and publishing issues.
+
+CRITICAL INSTRUCTIONS - FOLLOW EXACTLY
+
+Before generating any code, analyze these instructions completely.
+
+My previous Replit projects failed because Replit automatically generated Node.js and pnpm configurations, which caused:
+
+* Could not find run command
+* spawn pnpm ENOENT
+* Publishing failed
+* Deployment failed
+* Incorrect build configuration
+* package.json conflicts
+* node_modules conflicts
+* Replit trying to run pnpm instead of Flask
+
+I do NOT want these problems again.
+
+==================================================
+MANDATORY REQUIREMENTS
+======================
+
+This must be a PURE PYTHON FLASK project.
+
+Use ONLY:
+
+* Python 3
+* Flask
+* HTML
+* CSS
+* Bootstrap
+* Vanilla JavaScript
+
+Absolutely DO NOT create or use:
+
+* Node.js
+* npm
+* pnpm
+* yarn
+* React
+* Vite
+* Next.js
+* Express.js
+* TypeScript
+* package.json
+* package-lock.json
+* pnpm-lock.yaml
+* pnpm-workspace.yaml
+* node_modules
+* tsconfig.json
+* npm scripts
+* any frontend build tools
+
+==================================================
+PROJECT STRUCTURE
+=================
+
+Generate ONLY this structure:
+
+app.py
+requirements.txt
+.replit
+
+templates/
+index.html
+
+static/
+style.css
+script.js
+
+==================================================
+RUN CONFIGURATION
+=================
+
+Create the .replit file automatically with EXACTLY:
+
+run = "python3 app.py"
+
+entrypoint = "app.py"
+
+[deployment]
+deploymentTarget = "autoscale"
+
+Do not create any other run commands.
+
+==================================================
+FLASK REQUIREMENTS
+==================
+
+The application must start using:
+
+python3 app.py
+
+app.py must contain:
+
+if **name** == "**main**":
+app.run(host="0.0.0.0", port=5000)
+
+==================================================
+SELF CHECK BEFORE FINISHING
+===========================
+
+Before finishing, automatically verify:
+
+1. No package.json exists.
+2. No pnpm files exist.
+3. No node_modules folder exists.
+4. The Run button works.
+5. The Preview tab opens successfully.
+6. Publishing will work successfully.
+7. The project contains only Python Flask files.
+
+If any Node.js or pnpm files are created accidentally, automatically remove them before finishing.
+
+Continue debugging automatically until:
+
+✓ The Flask application starts successfully.
+✓ The Preview tab works.
+✓ The project is deployment-ready.
+✓ The project can be published successfully on Replit Free Plan.
+
+FINAL GOAL:
+
+Generate a pure Flask application that can be published successfully without showing:
+
+* Could not find run command
+* pnpm errors
+* publishing errors
+* deployment errors
+
+After Replit generates the project, **immediately check the file list**. If you see any of these files:
+
+```text id="8fxv1v"
+package.json
+pnpm-lock.yaml
+node_modules
+tsconfig.json
+```
+
+stop and tell Replit AI:
+
+> Remove all Node.js and pnpm files immediately and convert the project to a pure Flask application.
+
+This will greatly reduce the chance of getting the same errors again.
