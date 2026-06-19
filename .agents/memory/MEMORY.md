@@ -1,0 +1,2 @@
+- [Flask artifact routing](flask-artifact-routing.md) — verifyAndReplaceArtifactToml needs single [[services]] with nested [services.*] config; multiple [[services]] blocks fail schema validation.
+- [XGBoost severity shift](xgboost-severity.md) — model trained on Severity−1 (0–3); add 1 to predictions to restore original 1–4 scale.
