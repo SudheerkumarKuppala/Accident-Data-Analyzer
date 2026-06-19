@@ -15,17 +15,13 @@ run = "python /home/runner/workspace/python-app/app.py"
 [services.production]
 
 [services.production.build]
-args = ["echo", "no-build"]
-
-[services.production.build.env]
-NODE_ENV = "production"
+args = ["pip", "install", "-r", "python-app/requirements.txt"]
 
 [services.production.run]
-args = ["python", "/home/runner/workspace/python-app/app.py"]
+args = ["bash", "start.sh"]
 
 [services.production.run.env]
 PORT = "8000"
-NODE_ENV = "production"
 
 [services.production.health.startup]
 path = "/"
