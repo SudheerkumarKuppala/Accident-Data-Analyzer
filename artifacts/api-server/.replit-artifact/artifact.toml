@@ -10,7 +10,7 @@ name = "SafeRouteX AI"
 paths = ["/"]
 
 [services.development]
-run = "python python-app/app.py"
+run = "python /home/runner/workspace/python-app/app.py"
 
 [services.production]
 
@@ -21,7 +21,7 @@ args = ["echo", "no-build"]
 NODE_ENV = "production"
 
 [services.production.run]
-args = ["python", "python-app/app.py"]
+args = ["python", "/home/runner/workspace/python-app/app.py"]
 
 [services.production.run.env]
 PORT = "8000"
