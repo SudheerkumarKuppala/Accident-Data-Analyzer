@@ -1,0 +1,96 @@
+The Preview is still blank and the app is not running.
+
+Do not modify the UI.
+
+Your only task is to start the Flask application successfully.
+
+Please:
+
+1. Run `python app.py` yourself.
+
+2. Read the complete startup error from the console.
+
+3. Fix every error one by one until the application starts successfully.
+
+4. Continue fixing errors automatically until the console shows:
+
+   * Running on http://0.0.0.0:5000
+
+5. Ensure `.replit` contains:
+
+run = "python app.py"
+
+6. Remove all conflicting workflows, artifact wrappers, Node.js commands, and custom startup scripts.
+
+7. Verify that the Flask app listens on:
+
+app.run(host="0.0.0.0", port=5000)
+
+8. Do not stop until the Preview displays the application successfully.
+
+IMPORTANT: The frontend displays:
+
+"Prediction Error: Model not loaded. Please check server logs."
+
+Your task is to completely fix the model loading issue.
+
+Please do the following:
+
+1. Locate the trained model file:
+
+   * xgboost_accident_model.pkl
+
+2. Verify that the file actually exists in the project.
+
+3. Print the current working directory and all files during startup:
+
+```python
+import os
+
+print("Current directory:", os.getcwd())
+print("Files in current directory:", os.listdir())
+```
+
+4. Load the model using an absolute path:
+
+```python
+import os
+import joblib
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "xgboost_accident_model.pkl")
+
+try:
+    model = joblib.load(MODEL_PATH)
+    print("Model loaded successfully from:", MODEL_PATH)
+except Exception as e:
+    print("ERROR LOADING MODEL:", str(e))
+    model = None
+```
+
+5. If the model file is inside another folder, automatically update the path.
+
+6. Ensure the following packages are installed:
+
+   * xgboost
+   * joblib
+   * numpy
+   * pandas
+   * scikit-learn
+
+7. Add all missing packages to requirements.txt.
+
+8. During startup print:
+
+```python
+print("Python version:", sys.version)
+print("Model path:", MODEL_PATH)
+```
+
+9. If the model was trained with a different xgboost version, automatically install a compatible version.
+
+10. Run the application and confirm in the console:
+
+"Model loaded successfully"
+
+11. Do not stop until prediction requests work successfully without errors.
