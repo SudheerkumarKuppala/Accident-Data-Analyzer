@@ -5,18 +5,18 @@ version = "1.0.0"
 id = "3B4_FFSkEVBkAeYMFRJ2e"
 
 [[services]]
-localPort = 8000
+localPort = 5000
 name = "SafeRouteX AI"
 paths = ["/"]
 
 [services.env]
-PORT = "8000"
+PORT = "5000"
 
 [services.development]
-run = "bash start.sh"
+run = "bash /home/runner/workspace/start.sh"
 
 [services.production]
-run = "bash start.sh"
+run = "bash /home/runner/workspace/start.sh"
 build = "pip install -r python-app/requirements.txt"
 
 [services.production.health.startup]

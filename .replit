@@ -3,7 +3,7 @@ modules = ["python-3.11"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["yakut"]
+packages = ["glibcLocales", "yakut"]
 
 [deployment]
 deploymentTarget = "cloudrun"
@@ -13,8 +13,20 @@ run = ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
 expertMode = true
 
 [[ports]]
+localPort = 5000
+externalPort = 5000
+
+[[ports]]
+localPort = 5001
+externalPort = 3000
+
+[[ports]]
 localPort = 8000
 externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
 
 [[ports]]
 localPort = 8081

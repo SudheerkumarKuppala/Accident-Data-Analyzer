@@ -7,8 +7,12 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-MODEL_PATH = os.path.join(os.path.dirname(__file__), 'xgboost_accident_model.pkl')
+MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'xgboost_accident_model.pkl')
 model = None
+
+print("Current directory:", os.getcwd())
+print("Files:", os.listdir(os.path.dirname(os.path.abspath(__file__))))
+print("Model path:", MODEL_PATH)
 
 def load_model():
     global model
@@ -16,8 +20,10 @@ def load_model():
         model = joblib.load(MODEL_PATH)
         print("Model loaded successfully.")
     except Exception as e:
-        print(f"Error loading model: {e}")
+        print(f"Model loading failed: {e}")
         model = None
+
+load_model()
 
 STATE_ENCODING = {
     'AK': 0, 'AL': 1, 'AR': 2, 'AZ': 3, 'CA': 4, 'CO': 5, 'CT': 6,
@@ -205,6 +211,6 @@ def get_history():
     return jsonify(prediction_history)
 
 if __name__ == '__main__':
-    load_model()
-    port = int(os.environ.get('PORT', 8000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    port = int(os.environ.get('PORT', 5000))
+    print(f"Starting Flask on port {port}")
+    app.run(host='0.0.0.0', port=port, debug=True)
