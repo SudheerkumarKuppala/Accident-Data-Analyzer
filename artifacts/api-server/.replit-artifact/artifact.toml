@@ -9,11 +9,11 @@ localPort = 5000
 name = "SafeRouteX AI"
 paths = ["/"]
 
-[services.env]
-PORT = "5000"
-
 [services.development]
 run = "bash /home/runner/workspace/start.sh"
+
+[services.development.env]
+PORT = "5000"
 
 [services.production]
 run = "bash /home/runner/workspace/start.sh"
