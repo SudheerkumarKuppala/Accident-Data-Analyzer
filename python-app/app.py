@@ -119,6 +119,10 @@ FEATURES = [
     'Wind_Direction', 'Weather_Condition', 'Source'
 ]
 
+@app.route('/favicon.ico')
+def favicon():
+    return app.send_static_file('favicon.svg'), 200, {'Content-Type': 'image/svg+xml'}
+
 @app.route('/')
 def index():
     return render_template('index.html',
